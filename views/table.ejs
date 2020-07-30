@@ -22,7 +22,6 @@
         <table class="table container ">
             <thead>
               <tr>
-                <th scope="col">#</th>
                 <th scope="col">Name</th>
                 <th scope="col">Email</th>
                 <th scope="col">Number</th>
@@ -32,17 +31,16 @@
               </tr>
             </thead>
             <tbody>
-            <% for(let i=1; i<=5; i++) { %>
+            <% posts.forEach( (singlePost) => { %>
               <tr>
-                <th scope="row"> <%= i %> </th>
-                <td>Mark</td>
-                <td>Otto12345@gmail.com</td>
-                <td>1234567890</td>
-                <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil at nulla consectetur magni deleniti animi, modi nemo ab tempora dolor.</td>
+                <td> <%= singlePost.name %> </td>
+                <td> <%= singlePost.email %> </td>
+                <td> <%= singlePost.number %> </td>
+                <td> <%= singlePost.message %> </td>
                 <td> <button type="submit" class="btn btn-primary" > EDIT </button> </td>
                 <td> <button type="submit" class="btn btn-danger" > DELETE </button> </td>
               </tr>
-            <% } %>
+              <% }) %>
             </tbody>
           </table>
     </div>

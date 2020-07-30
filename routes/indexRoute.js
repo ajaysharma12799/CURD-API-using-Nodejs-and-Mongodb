@@ -1,16 +1,13 @@
 const router = require('express').Router();
 
+const { createMessage, findAllPOST } = require('../controllers/messageController');
+
 router.get('/', (req, res) => {
     res.render('index');
 });
 
-router.post('/submitForm', (req, res) => {
-    console.log(req.body);
-    res.send('Thanks For Submission');
-});
+router.post('/', createMessage);
 
-router.get('/table', (req, res) => {
-    res.render('table');
-})
+router.get('/table', findAllPOST);
 
 module.exports = router;

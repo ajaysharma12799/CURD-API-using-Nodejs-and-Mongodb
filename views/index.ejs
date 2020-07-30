@@ -17,11 +17,14 @@
             <h1 class="navbar-brand">CURD APP</h1>
         </nav>
     </div>
+    <!-- Flash Message Starts -->
+    <%- include('./partials/flashMessage.ejs') %>
+    <!-- Flash Message Ends -->
     <!-- Form -->
     <div class="container mx-auto my-auto">
-        <form action="/submitForm" method="post">
+        <form action="/" method="post">
             <div class="form-group">
-                <input type="text" class="form-control" name="name" placeholder="Enter Your Name">
+                <input type="name" class="form-control" name="name" placeholder="Enter Your Name">
             </div>
             <div class="form-group">
                 <input type="email" class="form-control" name="email" placeholder="Enter Your Email">
@@ -30,7 +33,7 @@
                 <input type="text" class="form-control" name="phone" placeholder="Enter Your Number">
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" name="message" placeholder="Enter Your Message">
+                <input type="message" class="form-control" name="message" placeholder="Enter Your Message">
             </div>
             <button type="submit" class="btn btn-primary float-left " >Submit</button>
             <a href="/table" class="btn btn-success float-right" >View all Record</a>
